@@ -74,7 +74,10 @@ def book_finder(target):
         return 'Errors'
 
 
+def main():
+    dumbing_scraper()
 
-dumbing_scraper()
+if __name__ == '__main__':
+    main()
 
 
