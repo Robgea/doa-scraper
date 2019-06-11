@@ -9,7 +9,6 @@ def dumbing_scraper():
 
     page_count = 1
     url = 'http://www.dumbingofage.com/2010/comic/book-1/01-move-in-day/home/'
-    end_condition = False
     last_com = False
     book = 'thisgetsreplacedbelow'
     init_url = requests.get(url)
@@ -18,7 +17,7 @@ def dumbing_scraper():
     last_url = last_img.get('href')
 
 
-    while end_condition == False:       
+    while last_com == False:       
 
         doa_comic = requests.get(url)
 
@@ -46,20 +45,14 @@ def dumbing_scraper():
         image_file.close()
 
 
-        if last_com == True:
-            end_condition = True
+        if url == last_url:
+            last_com = True
             sys.stdout.write('\nAll done!')
             sys.stdout.flush()
 
         else:
-
             next_img = comic_soup.find(title = 'Next')
             url = next_img.get('href')
-            if url == last_url:
-                last_com = True 
-                sys.stdout.write('\nEnd condition triggered!')
-                sys.stdout.flush()
-            
             page_count += 1
 
 def book_finder(target):
@@ -79,5 +72,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
