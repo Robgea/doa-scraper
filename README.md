@@ -1,15 +1,17 @@
 ## Dumbing of Age Scraper
 
-This is a script that scrapes the Dumbing of Age webcomic and downloads every page of it. This renames each comic by the book it's in and by pagenumber. It will also save each comic to a subdirectory for each book that it's in. 
+This is a script that scrapes the Dumbing of Age webcomic and downloads every page of it. It names each comic by the book it's in and by pagenumber and will also save each comic to a sub-directory for the appropriate book.
 
-I've done a complete run through and it worked with no real errors (as of June 9th.) This will always download every comic that is available to download as of the time it's run.
+As of April 17th 2020 this is now persistent in that it will, via a shelf-directory, save its progress in the comic so that if it runs into any errors it will be able to pick up from the error and so that you can perpetually update the directories. 
 
-This took about three hours to run completely on my computer. If you want to do this in smaller chunks replace the 'url' variable with a different starting point. Changing the end point could be done by futzing with the 'last_url' variable if you really want to do that.
+I've done a complete run through and it worked with no real errors (as of April 17th.) This will always download every comic that is available to download as of the time it's run.
+
+This took about three hours to run completely on my computer. If you want to do this in smaller chunks I would add a iterating run-count and do it that way.
 
 ## A note 
 
-If you're here you either really like web scrapers or because you like Dumbing of Age. If that's true, and you have extra income, try supporting the webcomic by directly buying things from them (here are the two store links: https://dumbingofage.bigcartel.com/  https://www.teepublic.com/stores/damnyouwillis).  People like this deserve our respect and support for what they do and there's no better way to show that than materially supporting the work that they do. 
+If you're here you either really like web scrapers or because you like Dumbing of Age. If that's true, and you have extra income, try supporting the webcomic either by directly buying things from them (here are the two store links: https://dumbingofage.bigcartel.com/  https://www.teepublic.com/stores/damnyouwillis) or by contributing to the patreon here: https://www.patreon.com/dumbingofage/posts.  People like this deserve our respect and support for what they do and there's no better way to show that than materially supporting the work that they do. 
 
 ## Future Plans
 
-Most likely not going to touch this again.  If it breaks let me know and I'll see what I can do to make it work.
+Having now updated this so that it saves its progress, I don't plan on updating it again unless it grievously breaks. If something goes wrong, please let me know and I'll try and fix it.
