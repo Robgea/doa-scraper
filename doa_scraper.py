@@ -114,14 +114,13 @@ def dumbing_scraper():
 def book_finder(target):
     try:
         book_count = target.find('book-')
-        book_end = book_count + 6
+        book_end = book_count + (target[book_count:].find('/'))
         book_str = target[book_count:book_end]
         return book_str
     except:
         sys.stdout.write(f'Error happened at {target}')
         sys.stdout.flush()
         return 'Errors'
-
 
 def main():
     dumbing_scraper()
